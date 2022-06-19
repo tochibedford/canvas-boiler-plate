@@ -33,7 +33,16 @@ function Circle(x, y, dx, dy, radius, color){
   this.dy = dy
   this.radius = radius
   this.color  = color
+  const originalColor = color
   const originalRadius = radius
+  
+  this.getOriginalColor = function(){
+    return originalColor
+  }
+  
+  this.getOriginalRadius = function(){
+    return originalRadius
+  }
   
   this.draw = function(){
     ctx.beginPath()
